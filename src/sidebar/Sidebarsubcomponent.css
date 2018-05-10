@@ -1,0 +1,19 @@
+.sidebarHeading{
+   margin-top: 1em;
+   color: #DF4F73;
+}
+
+.ui.medium.image{
+   margin-top: 1em;
+   width: 160px;
+   margin-left: 3.5em;
+}
+
+.ui.vertical.menu{
+   width:100%; 
+}
+
+.ui.vertical.menu .item>i.icon {
+    float: left;
+    margin: 0 0 0 .5em;
+}
