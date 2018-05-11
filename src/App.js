@@ -4,7 +4,7 @@ import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import Sidebar from 'react-sidebar';
 import Sidebarsubcomponent from './sidebar/Sidebarsubcomponent';
-
+ 
 const sidebarstyle = {
   root: {
     position: 'absolute',

@@ -27,4 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-
+#root > div > div > div:nth-child(3){
+  background: lightgray;
+}

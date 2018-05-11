@@ -17,3 +17,9 @@
     float: left;
     margin: 0 0 0 .5em;
 }
+
+#root > div > div > div:nth-child(1) > div > i{
+    /* position: absolute; */
+    /* bottom: 0; */
+    margin-top: 4em;
+}
