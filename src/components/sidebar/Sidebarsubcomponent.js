@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Sidebarsubcomponent.css'
 import { Image, Icon, Menu } from 'semantic-ui-react'
-import avatar from '../elliot.jpg';
+import avatar from 'Images/elliot.jpg';
 
 class Sidebarsubcomponent extends Component {
   constructor(props) {
