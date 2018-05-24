@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './LeftPanel.css';
+import PropTypes from 'prop-types';
 import 'semantic-ui-css/semantic.min.css';
 import Sidebar from 'react-sidebar';
 import Sidebarsubcomponent from 'Components/sidebar/Sidebarsubcomponent';
+import './LeftPanel.css';
  
 const sidebarstyle = {
   root: {
@@ -71,14 +72,21 @@ class LeftPanel extends Component {
       <div className="App">
         <Sidebar styles={sidebarstyle}
         sidebar={sidebarContent}
-               open={true}
-               
-               docked={true}
-               >
-      </Sidebar>
+        open={true}      
+        docked={true}
+        addIndex={this.props.addIndex}
+        />
       </div>
     );
   }
 }
+
+LeftPanel.defaultProps = {
+  addIndex: ()=>({}),
+};
+
+LeftPanel.propTypes = {
+  addIndex: PropTypes.func
+};
 
 export default LeftPanel;

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Loadable from 'react-loadable';
+import { sampleAction } from 'Actions/sampleActions';
 import './index.css';
 
 const LeftPanel = Loadable({
@@ -12,11 +14,23 @@ const RightPanel = Loadable({
     loading: () => <div>Loading...</div>,
   });
 
-const AdminComponent = () => (
+const AdminComponent = (props) => (
   <div className="admin-container">
-    <LeftPanel className="leftPane"/>
-    <RightPanel className="rightPane"/>
+    <LeftPanel className="leftPane" addIndex={props.addIndex}/>
+    <RightPanel className="rightPane" sampleIndex={props.sampleIndex} />
   </div>
 );
 
-export default AdminComponent;
+const mapStateToProps = (state) => ({
+    sampleIndex: state.adminReducer.sampleIndex
+});
+
+const mapDispatchToProps = dispatch => ({
+  addIndex: (number) => {
+    dispatch(sampleAction(number))
+  }
+})
+
+const AdminContainer = connect(mapStateToProps, mapDispatchToProps)(AdminComponent);
+
+export default AdminContainer;
