@@ -8,10 +8,13 @@ class Sidebarsubcomponent extends Component {
     super(props);
 
     this.state = { activeItem: 'Summary' }
-
+    this.handleItemClick = this.handleItemClick.bind(this);
   }
   
-  handleItemClick(e, { name }){this.setState({ activeItem: name })}
+  handleItemClick(e, { name }){
+    console.log('name',name)
+    this.setState({ activeItem: name }
+  )}
 
   render() {
     const { activeItem } = this.state
