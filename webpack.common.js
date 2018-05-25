@@ -28,7 +28,9 @@ module.exports = {
       Containers: path.resolve(__dirname, './src/containers'),
       Images: path.resolve(__dirname, './src/images'),
       Constants: path.resolve(__dirname, './src/constants'),
-      Actions: path.resolve(__dirname, './src/actions')
+      Actions: path.resolve(__dirname, './src/actions'),
+      Config: path.resolve(__dirname, './src/config'),
+      APIs: path.resolve(__dirname, './src/api')
     },
   },
   module: {

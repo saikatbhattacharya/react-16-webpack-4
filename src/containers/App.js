@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
@@ -9,17 +9,19 @@ const Admin = Loadable({
   loading: Loading,
 });
 
-// const About = Loadable({
-//   loader: () => import('./routes/About'),
-//   loading: Loading,
-// });
+const AppComponent = Loadable({
+  loader: () => import('./app-container'),
+  loading: Loading,
+});
 
 const App = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={Admin}/>
+      <Route path="/billwale" component={AppComponent}/>
     </Switch>
   </Router>
 );
+
 
 export default App;
