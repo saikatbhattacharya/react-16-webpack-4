@@ -3,7 +3,6 @@
       {
         "name": "billwale",
         "script": "src/server/index.js",
-        "instances": 4,
         "watch": ["src/server"],
         "env": {
           "DEBUG": "fetch:*"
