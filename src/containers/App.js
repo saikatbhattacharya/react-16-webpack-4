@@ -17,8 +17,8 @@ const AppComponent = Loadable({
 const App = () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={Admin}/>
-      <Route path="/billwale" component={AppComponent}/>
+      <Route exact path="/" component={AppComponent}/>
+      <Route path="/admin" component={Admin}/>
     </Switch>
   </Router>
 );
