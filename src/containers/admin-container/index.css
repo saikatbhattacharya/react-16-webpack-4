@@ -1,0 +1,8 @@
+.admin-container{
+    width: 100%;
+}
+.admin-container .rightPane{
+    float: right;
+    width: 80%;
+    display: block;
+}
